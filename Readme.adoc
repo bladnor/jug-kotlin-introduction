@@ -1,6 +1,5 @@
 == Introduction to Kotlin by Example
 
-=== The coolest features
 
 This repo consists of severel modules
 

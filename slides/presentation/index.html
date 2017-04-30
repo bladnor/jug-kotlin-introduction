@@ -38,7 +38,7 @@ class: center, middle
 2. die coolsten kotlin features
 3. rest service mit spring boot + kotlin
 4. compiling kotlin zu javascript
-5. (compiling kotlin native)
+5. compiling kotlin zu native
 
 ---
 
@@ -51,13 +51,14 @@ class: center, middle
 --
 
 - kotlin version 1.1 seit 1. März 2017 verfügbar (neueste Minor Version ist 1.1.2)
+- wichtigste neuerungen sind coroutines (experimental) und compilierung zu javascript
 --
 
 - läuft auf der JVM
 --
 
-- erzeugt mit der kotlin-stdlib per default java 6 byte code
-- mit der kotlin-stdlib-jre8 kann neu auch java 8 byte code erzeugt werden
+- erzeugt mit der kotlin-stdlib java 6 byte code
+- erzeugt mit der kotlin-stdlib-jre8 java 8 byte code
 --
 
 - statisch typisiert mit type inference
@@ -122,14 +123,13 @@ type inference / higher order functions / lambdas
 ---
 # what else ...
 
-### kotlin/native ≃ kotlin ohne VM.
-
+### kotlin/native ist kotlin ohne VM.
+- 4.4.2017: jetbrains Andrey Breslav kündigt tech preview zu kotlin native an
 - Verwendet die LLVM compiler Infrastruktur um den Machinen Code zu generieren.
 - kotlin/native gibt es als Preview für Max OS X 10.10, x86-64 Ubuntu Linux, Apple iOS, Raspberry Pi
 - [kotlin/native infos](https://blog.jetbrains.com/kotlin/2017/04/kotlinnative-tech-preview-kotlin-without-a-vm/)
 
-
-
+---
 # Links
 
 - [Kotlin Website](https://kotlinlang.org/)
@@ -142,6 +142,8 @@ type inference / higher order functions / lambdas
 - [Kotlin Scala Vergleich](https://kotlinlang.org/docs/reference/comparison-to-scala.html)
 - [Code auf GitHub](https://github.com/bladnor/jug-kotlin-introduction)
 
+---
+# Q&A
 
     </textarea>
 <script type="text/javascript">
