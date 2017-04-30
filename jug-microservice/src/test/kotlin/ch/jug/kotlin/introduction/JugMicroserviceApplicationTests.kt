@@ -1,4 +1,4 @@
-package ch.jug.kotlin
+package ch.jug.kotlin.introduction
 
 import org.junit.Test
 import org.junit.runner.RunWith

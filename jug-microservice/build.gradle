@@ -12,13 +12,13 @@ buildscript {
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
 		classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}")
+		// Das allopen Plugin erlaubt es Klass-Annotationen zu definieren deren Klassen als 'open' gelten sollen
 		classpath("org.jetbrains.kotlin:kotlin-allopen:${kotlinVersion}")
 	}
 }
 
 apply plugin: 'kotlin'
-apply plugin: 'kotlin-spring'
-apply plugin: 'eclipse'
+apply plugin: 'kotlin-spring' // Definiert die Annotationen für das allopen Plugin die springboot braucht
 apply plugin: 'org.springframework.boot'
 
 
