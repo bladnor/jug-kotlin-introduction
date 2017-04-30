@@ -1,6 +1,9 @@
+group  'ch.jug.kotlin.introduction'
+version  '0.0.1-SNAPSHOT'
+
 buildscript {
 	ext {
-		kotlinVersion = '1.1.2'
+		kotlinVersion = '1.1.2-2'
 		springBootVersion = '1.5.3.RELEASE'
 	}
 	repositories {
@@ -18,7 +21,7 @@ apply plugin: 'kotlin-spring'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 
-version = '0.0.1-SNAPSHOT'
+
 sourceCompatibility = 1.8
 compileKotlin {
 	kotlinOptions.jvmTarget = "1.8"
