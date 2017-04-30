@@ -1,0 +1,16 @@
+== Introduction to Kotlin by Example
+
+=== The coolest features
+
+This repo consists of severel modules
+
+|===
+|Module | Description
+|kotlin-language-features| Describes the coolest features by Example
+|kotlin-microservice |A basic springboot rest application made with kotlin.
+|kotlin-javasript-helloworld| The most basic example how to compile kotlin to javascript
+|kotlin-javascript| A client for the microservice using kotlin html dsl
+|kotlin-native| A desription how to compile hello world to a linux executable
+====
+
+

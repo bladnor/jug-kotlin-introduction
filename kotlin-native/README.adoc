@@ -1,0 +1,52 @@
+== How to compile Kotlin to a linux executable
+
+Quelle: https://ariya.io/2017/04/first-look-kotlin-native[First Look: Kotlin Native]
+
+[source, bash]
+.download and unpack kotlin native compiler
+----
+$ curl -OL http://download.jetbrains.com/kotlin/native/kotlin-native-linux-0.1.tar.gz
+$ tar xf kotlin-native-linux-0.1.tar.gz
+$ cd kotlin-native-linux-0.1
+----
+
+
+[source, bash]
+.write kotlin main function
+----
+$ cat << EOF > hola.kt
+> fun main(args : Array<String>) {
+>     println("Hello from Kotlin at JUG.ch!")
+> }
+> EOF
+----
+
+[source, bash]
+.compile
+----
+$ bin/kotlinc hola.kt -o hola
+----
+
+[source, bash]
+.compile with optimization
+----
+$ bin/kotlinc hola.kt -o hola -opt
+----
+
+[source, bash]
+.execute
+----
+$ ./hola
+----
+
+[source, bash]
+.print shared library dependencies
+----
+$ ldd ./hola
+----
+
+[source, bash]
+.reduce file size (discard symbols from object files)
+----
+$ strip ./hola
+----
