@@ -13,8 +13,6 @@ open class KotlinMicroserviceApplication {
         repository.save(Superhero("elektra","combat"))
         repository.save(Superhero("loki","shape-shifting"))
         repository.save(Superhero("superman","flight"))
-        repository.save(Superhero("batmann"))
-        repository.save(Superhero())
     }
 }
 

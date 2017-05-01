@@ -16,16 +16,14 @@ fun main(args: Array<String>) {
     val lengthB = nonNullableType.length
     println("Länge: $lengthB")
 
-    // Unsafe cast geht immer. In diesem Fall führt das aber zu einer kotlin.TypeCastException
-    val convertedToNonNullable: String = nullableType as String
-    nonNullableType = convertedToNonNullable
+    // Zuweisung einer nicht nullable Typs zu einem nullable Typ geht
+    nullableType = nonNullableType
 
 //     Zuweisung eines nullable Typs zu einem nicht nullable Typ geht nicht
 //    nonNullableType = nullableType
 
-    // Zuweisung einer nicht nullable Typs zu einem nullable Typ geht
-    nullableType = nonNullableType
-
+    // Unsafe cast geht immer. Führt aber immer zu einer kotlin.TypeCastException
+    val convertedToNonNullable: String = nullableType as String
 }
 
 

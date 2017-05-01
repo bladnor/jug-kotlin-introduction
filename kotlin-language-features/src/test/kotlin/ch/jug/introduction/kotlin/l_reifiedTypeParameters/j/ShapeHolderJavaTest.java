@@ -1,5 +1,8 @@
-package ch.jug.introduction.kotlin.k_reifiedTypeParameters.j;
+package ch.jug.introduction.kotlin.l_reifiedTypeParameters.j;
 
+import ch.jug.introduction.kotlin.k_reifiedTypeParameters.j.Circle;
+import ch.jug.introduction.kotlin.k_reifiedTypeParameters.j.Rectangle;
+import ch.jug.introduction.kotlin.k_reifiedTypeParameters.j.ShapeHolderJava;
 import org.junit.Assert;
 import org.junit.Test;
 

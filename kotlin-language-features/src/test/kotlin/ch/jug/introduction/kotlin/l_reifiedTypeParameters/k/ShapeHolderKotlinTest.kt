@@ -8,9 +8,9 @@ class ShapeHolderKotlinTest {
     @Test
     fun testCircleShapeHolder() {
         val shapeHolder = ShapeHolderKotlin()
-        shapeHolder.addShape(ch.jug.introduction.kotlin.ii_reifiedTypeParameters.k.Rectangle())
-        shapeHolder.addShape(ch.jug.introduction.kotlin.ii_reifiedTypeParameters.k.Rectangle())
-        shapeHolder.addShape(ch.jug.introduction.kotlin.ii_reifiedTypeParameters.k.Circle())
+        shapeHolder.addShape(Rectangle())
+        shapeHolder.addShape(Rectangle())
+        shapeHolder.addShape(Circle())
 
         val circles: List<Circle> = shapeHolder.filterByType<Circle>()
         Assert.assertEquals( 1, circles.size)

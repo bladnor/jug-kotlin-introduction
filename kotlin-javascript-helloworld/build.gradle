@@ -3,7 +3,6 @@ version '1.0-SNAPSHOT'
 
 buildscript {
     ext.kotlin_version = '1.1.2-2'
-    ext.kotlinx_html_version = '0.6.2'
 
     repositories {
         mavenCentral()
@@ -24,6 +23,12 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-js:$kotlin_version"
 }
 
+compileKotlin2Js.kotlinOptions.sourceMap = true
+compileKotlin2Js.kotlinOptions.outputFile = "${projectDir}/web/js/app.js"
+compileKotlin2Js.kotlinOptions.suppressWarnings = true
+compileKotlin2Js.kotlinOptions.verbose = true
+
+// Wird aktuell noch gebraucht um aus der compile time dependency (kotlin-stdlib-js-<version>.jar) das kotlin.js und das kotlin.meta.js zu extrahieren
 build.doLast {
     configurations.compile.each { File file ->
         copy {

@@ -27,6 +27,12 @@ dependencies {
     compile "org.jetbrains.kotlinx:kotlinx-html-js:$kotlinx_html_version"
 }
 
+compileKotlin2Js.kotlinOptions.sourceMap = true
+compileKotlin2Js.kotlinOptions.outputFile = "${projectDir}/web/js/app.js"
+compileKotlin2Js.kotlinOptions.suppressWarnings = true
+compileKotlin2Js.kotlinOptions.verbose = true
+
+// Wird aktuell noch gebraucht um aus der compile time dependency (kotlin-stdlib-js-<version>.jar) das kotlin.js und das kotlin.meta.js zu extrahieren
 build.doLast {
     configurations.compile.each { File file ->
         copy {

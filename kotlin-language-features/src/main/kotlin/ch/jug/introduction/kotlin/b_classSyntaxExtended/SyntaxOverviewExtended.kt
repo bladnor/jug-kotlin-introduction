@@ -40,8 +40,9 @@ class Superhero(val name: String, val realName: String = "", var status: String,
 fun main(args: Array<String>) {
     // Named Parameters
     val flash = Superhero("The Flash", status = "top fit", firstApperance = "1940")  // Calls Primär Konstruktor
+
+    println()
+
     Superhero("The Flash") // Calls Sekundär Konstruktor
 
-    flash.createdBy = "Bill Finger"
-    println(flash.createdBy)
 }

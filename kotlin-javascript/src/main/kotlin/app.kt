@@ -1,6 +1,7 @@
 import kotlinx.html.*
 import kotlinx.html.dom.create
 import kotlinx.html.js.div
+import kotlinx.html.js.onClickFunction
 import kotlinx.html.js.onSubmitFunction
 import org.w3c.dom.HTMLDivElement
 import org.w3c.dom.HTMLElement
@@ -29,7 +30,6 @@ val appContent = document.create.div {
             textInput(classes = "form-control") {
                 placeholder = "name"
                 name = "name"
-                id = "superheroName"
             }
         }
         div(classes = "form-group") {
@@ -40,7 +40,6 @@ val appContent = document.create.div {
             textInput(classes = "form-control") {
                 placeholder = "power"
                 name = "superpower"
-                id = "superheroPower"
             }
         }
 

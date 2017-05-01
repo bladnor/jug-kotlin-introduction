@@ -17,7 +17,7 @@ val wolverine = """Born with super-human senses and the power to heal from almos
 
                    |Ein Dollarzeichen ${'$'}"""
 fun main(args: Array<String>) {
-    println(wolverine)
+//    println(wolverine)
     println(wolverine.trimMargin())
 
 }

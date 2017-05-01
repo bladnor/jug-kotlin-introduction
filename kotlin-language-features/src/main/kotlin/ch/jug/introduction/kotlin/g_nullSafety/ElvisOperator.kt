@@ -8,9 +8,6 @@ package ch.jug.introduction.kotlin.g_nullSafety
 fun sendLetter(address: String?): String? = address ?: "Return to sender, address unknow ... "
 
 
-
-
-
 /**
  * Kann z.B. verwendet werden um Preconditions zu prüfen
  */
