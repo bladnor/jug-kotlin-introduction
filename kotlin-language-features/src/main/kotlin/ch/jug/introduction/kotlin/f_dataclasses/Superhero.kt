@@ -3,9 +3,10 @@ package ch.jug.introduction.kotlin.f_dataclasses
  * - Bei data Klassen werden automatisch equals(), hashCode(), toString() generiert.
  * - Zusätzlich wird eine copy() function und sog. componentN() functions erzeugt
  * - Data Klassen brauchen einen Primär Konstruktor mit mindestens einem Parameter
- * - Properties die nicht im Primär Konstruktor deklariert sind, nehmen nicht Teil an equals() und hashCode()
+ * - Properties die nicht im Primär Konstruktor deklariert sind, nehmen nicht Teil
+ *   an equals() und hashCode()
  */
-data class Superhero(var gender: String, var name: String, var realName: String)
+data class Superhero(var gender: String, val name: String, var realName: String)
 
 
 //***

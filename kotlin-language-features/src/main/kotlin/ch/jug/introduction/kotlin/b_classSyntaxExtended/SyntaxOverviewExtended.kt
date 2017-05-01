@@ -1,18 +1,25 @@
 package ch.jug.introduction.kotlin.b_classSyntaxExtended
 
 // TODO rbe: show interfaces can have implementation
-interface Super {
-    fun calculatePower(): Int
+interface SuperInterface {
     fun currentMood(): String {
         return "happy"
     }
 }
 
 /**
+ * Klassen sind "final by default". Wenn man subklassen erstellen will muss die class mit 'open' deklariert werden.
+ */
+open class SuperClass {
+     open fun calculatePower(): Int = 0
+
+}
+
+/**
  * @param firstApperance Für Parameter ohne `val` oder `var` wird kein Property und keine Getter
  * oder Setter erzeugt.
  */
-class Superhero(val name: String, val realName: String = "", var status: String, firstApperance: String) : Super {
+class Superhero(val name: String, val realName: String = "", var status: String, firstApperance: String) : SuperClass() {
     init {
         println("init called '$firstApperance' of $this")
     }

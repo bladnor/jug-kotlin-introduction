@@ -10,11 +10,11 @@ package ch.jug.introduction.kotlin.e_extensionfunctions
  * - `this` bezieht sich auf den Receiver
  *
  */
+// TODO rbe: show Extension Function ist prefixed mit dem 'Receiver Type'
 fun String.theQuestion(): String {
     return this + "the ultimate question of life the universe and everything?"
 }
 
-// TODO rbe: show Extension Function ist prefixed mit dem 'Receiver Type'
 fun String.theAnswer(): String {
     return this + " 42"
 }

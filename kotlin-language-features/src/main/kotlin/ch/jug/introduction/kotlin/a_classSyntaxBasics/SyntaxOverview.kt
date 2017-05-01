@@ -26,7 +26,6 @@ fun sum(a: Int, b: Int): Int {
 fun main(args: Array<String>) {
     val superhero = Superhero("The Flash", "Barry Allen", "top fit")
 
-    println(superhero)
     println(superhero.name)
 
     println(sum(2, 3))
