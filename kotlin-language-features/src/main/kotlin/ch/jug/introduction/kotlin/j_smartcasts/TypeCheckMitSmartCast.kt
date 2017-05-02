@@ -28,6 +28,7 @@ fun main(args: Array<String>) {
         print(shape.area())
     }
 
+    // 'if' expessions wie oben können in kotlin mit 'when' ersetzt werden
     when (shape) {
         is Circle -> println(shape.radius)
         is Square -> println(shape.edge)

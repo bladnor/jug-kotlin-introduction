@@ -21,9 +21,6 @@ fun main(args: Array<String>) {
 
 //     Zuweisung eines nullable Typs zu einem nicht nullable Typ geht nicht
 //    nonNullableType = nullableType
-
-    // Unsafe cast geht immer. Führt aber immer zu einer kotlin.TypeCastException
-    val convertedToNonNullable: String = nullableType as String
 }
 
 

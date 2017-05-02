@@ -10,24 +10,17 @@ import org.springframework.web.bind.annotation.*
 @RequestMapping(value = "/superheroes")
 class SuperheroController @Autowired constructor(val superheroRepository: SuperheroRepository) {
 
-    val logger: Logger =  LoggerFactory.getLogger(SuperheroController::class.java)
-
     @CrossOrigin
     @RequestMapping(method = arrayOf(RequestMethod.GET))
     fun findAll(): List<Superhero> = superheroRepository.findAll()
 
     @RequestMapping(method = arrayOf(RequestMethod.POST))
-    fun addSuperhero(@RequestBody superhero: Superhero): Superhero {
-        val persistedHero = superheroRepository.save(superhero)
-        logger.debug("persisting: $persistedHero")
-        return persistedHero
-    }
+    fun addSuperhero(@RequestBody superhero: Superhero): Superhero = superheroRepository.save(superhero)
 
     @CrossOrigin
     @RequestMapping(method = arrayOf(RequestMethod.POST),consumes = arrayOf(MediaType.MULTIPART_FORM_DATA_VALUE))
     fun addSuperheroFromFrom(@ModelAttribute("superpower") superpower :String, @ModelAttribute("name") name:String):Superhero {
         val persistedHero = superheroRepository.save(Superhero(name, superpower))
-        logger.debug("persisting: $persistedHero")
         return persistedHero
     }
 }

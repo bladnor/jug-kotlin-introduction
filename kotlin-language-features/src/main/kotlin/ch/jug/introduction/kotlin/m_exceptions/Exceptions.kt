@@ -32,5 +32,5 @@ fun tryAsPartOfExpression(value: String): Int {
 //***
 fun main(args: Array<String>) {
         println("percentage: ${standardThrow(10)}")
-        println("percentage: ${tryAsPartOfExpression("5")}")
+        println("percentage: ${tryAsPartOfExpression("asb")}")
 }
